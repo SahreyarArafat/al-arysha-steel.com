@@ -43,15 +43,6 @@ tl.add(
 );
 
 // ---------------------------------------------------------
-/* The code below was written only for the parallax effect */
-
-// var parallax_effect = document.querySelector('header');
-// window.addEventListener('scroll', function () {
-//     let position = window.pageYOffset;
-//     parallax_effect.style.backgroundPositionY = `${position * 1}px`;
-// });
-
-// ---------------------------------------------------------
 /* The code below was written only for the PAGE AUTOMATIC PRELOADING ANIMATION */
 
 var preloader = document.querySelector('.preloader');
@@ -193,11 +184,7 @@ document
     });
 
 // ---------------------------------------------------------
-/* The code below was written only for the NAV & PROJECT SECTION'S SELECTED ITEM IDENTIFY */
-
-$(document).on('click', '.nav-container li', function () {
-    $(this).addClass('active-link').siblings().removeClass('active-link');
-});
+/* The code below was written only for the PROJECT SECTION'S SELECTED ITEM IDENTITY */
 
 $(document).on('click', '.project-link-container ul li', function () {
     $(this).addClass('active-link').siblings().removeClass('active-link');
@@ -228,4 +215,75 @@ chatClose.addEventListener('click', function () {
     whatsAppContainer.classList.replace('open-whatsApp', 'whatsApp-container');
     openIcon.classList.add('display-none');
     openText.classList.add('display-none');
+});
+
+// ---------------------------------------------------------
+/* The code below was written only for the NAV SECTION'S SELECTED ITEM IDENTITY */
+
+const homeSectionOffsetTop = document.getElementById('home').offsetTop - 1;
+const aboutSectionOffsetTop = document.getElementById('about').offsetTop - 1;
+const servicesSectionOffsetTop =
+    document.getElementById('services').offsetTop - 1;
+const projectsSectionOffsetTop =
+    document.getElementById('projects').offsetTop - 1;
+const teamSectionOffsetTop = document.getElementById('team').offsetTop - 1;
+const newsSectionOffsetTop = document.getElementById('news').offsetTop - 1;
+const contactSectionOffsetTop =
+    document.getElementById('contact').offsetTop - 1;
+
+document.addEventListener('scroll', function () {
+    if (
+        homeSectionOffsetTop <= window.pageYOffset &&
+        window.pageYOffset < aboutSectionOffsetTop
+    ) {
+        $('#home-btn')
+            .addClass('active-link')
+            .siblings()
+            .removeClass('active-link');
+    } else if (
+        aboutSectionOffsetTop <= window.pageYOffset &&
+        window.pageYOffset < servicesSectionOffsetTop
+    ) {
+        $('#about-btn')
+            .addClass('active-link')
+            .siblings()
+            .removeClass('active-link');
+    } else if (
+        servicesSectionOffsetTop <= window.pageYOffset &&
+        window.pageYOffset < projectsSectionOffsetTop
+    ) {
+        $('#services-btn')
+            .addClass('active-link')
+            .siblings()
+            .removeClass('active-link');
+    } else if (
+        projectsSectionOffsetTop <= window.pageYOffset &&
+        window.pageYOffset < teamSectionOffsetTop
+    ) {
+        $('#projects-btn')
+            .addClass('active-link')
+            .siblings()
+            .removeClass('active-link');
+    } else if (
+        teamSectionOffsetTop <= window.pageYOffset &&
+        window.pageYOffset < newsSectionOffsetTop
+    ) {
+        $('#team-btn')
+            .addClass('active-link')
+            .siblings()
+            .removeClass('active-link');
+    } else if (
+        newsSectionOffsetTop <= window.pageYOffset &&
+        window.pageYOffset < contactSectionOffsetTop
+    ) {
+        $('#news-btn')
+            .addClass('active-link')
+            .siblings()
+            .removeClass('active-link');
+    } else if (contactSectionOffsetTop <= window.pageYOffset) {
+        $('#contact-btn')
+            .addClass('active-link')
+            .siblings()
+            .removeClass('active-link');
+    }
 });

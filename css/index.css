@@ -1471,6 +1471,7 @@ header {
     display: flex;
     align-items: center;
     color: white;
+    transition: color 0.2s linear;
 }
 
 .phoneNumber-container h2 i,
@@ -1481,6 +1482,10 @@ header {
     transform: rotate(-35deg);
     color: gray;
     transition: color 0.2s linear;
+}
+
+.phoneNumber-container h2 i {
+    color: rgba(210, 255, 210, 0.514);
 }
 
 .phoneNumber-container:hover h2 i {
@@ -1514,6 +1519,7 @@ header {
 
 .email-container h2 i {
     transform: rotate(0deg);
+    color: rgba(253, 253, 214, 0.514);
 }
 
 .email-container:hover h2 i {
@@ -1532,10 +1538,11 @@ header {
     transform: rotate(0deg);
     font-size: 40px;
     margin-right: 10px;
+    color: rgba(255, 193, 182, 0.514);
 }
 
 .map-container:hover h2 i {
-    color: tomato;
+    color: rgb(255, 99, 71);
 }
 
 .map-container h2 span {
