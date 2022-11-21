@@ -1198,7 +1198,7 @@ header {
 }
 .team-image {
     max-width: 100%;
-    height: auto;
+    max-height: 600px;
     margin: auto;
     overflow: hidden;
 }
@@ -1334,58 +1334,63 @@ header {
 
 #test-text {
     width: 90%;
-    animation: test-text-fill-anim 3s ease forwards 3.4s;
+    animation: test-text-fill-anim 3s ease forwards 3.5s;
 }
-
+#test-text path {
+    stroke-opacity: 0;
+    animation-name: test-text-anim;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: forwards;
+}
 #test-text path:nth-child(1) {
     stroke-dasharray: 264px;
     stroke-dashoffset: 264px;
-    animation: test-text-anim 1.8s ease forwards;
 }
 #test-text path:nth-child(2) {
     stroke-dasharray: 193px;
     stroke-dashoffset: 193px;
-    animation: test-text-anim 1.8s ease forwards 0.2s;
+    animation-delay: 0.3s;
 }
 #test-text path:nth-child(3) {
     stroke-dasharray: 140px;
     stroke-dashoffset: 140px;
-    animation: test-text-anim 1.8s ease forwards 0.4s;
+    animation-delay: 0.6s;
 }
 #test-text path:nth-child(4) {
     stroke-dasharray: 94px;
     stroke-dashoffset: 94px;
-    animation: test-text-anim 1.8s ease forwards 0.6s;
+    animation-delay: 0.9s;
 }
 #test-text path:nth-child(5) {
     stroke-dasharray: 251px;
     stroke-dashoffset: 251px;
-    animation: test-text-anim 1.8s ease forwards 0.8s;
+    animation-delay: 1.2s;
 }
 #test-text path:nth-child(6) {
     stroke-dasharray: 140px;
     stroke-dashoffset: 140px;
-    animation: test-text-anim 1.8s ease forwards 1s;
+    animation-delay: 1.5s;
 }
 #test-text path:nth-child(7) {
     stroke-dasharray: 235px;
     stroke-dashoffset: 235px;
-    animation: test-text-anim 1.8s ease forwards 1.2s;
+    animation-delay: 1.8s;
 }
 #test-text path:nth-child(8) {
     stroke-dasharray: 201px;
     stroke-dashoffset: 201px;
-    animation: test-text-anim 1.8s ease forwards 1.4s;
+    animation-delay: 2.1s;
 }
 #test-text path:nth-child(9) {
     stroke-dasharray: 211px;
     stroke-dashoffset: 211px;
-    animation: test-text-anim 1.8s ease forwards 1.6s;
+    animation-delay: 2.4s;
 }
 #test-text path:nth-child(10) {
     stroke-dasharray: 222px;
     stroke-dashoffset: 222px;
-    animation: test-text-anim 1.8s ease forwards 1.8s;
+    animation-delay: 2.7s;
 }
 
 @keyframes test-text-anim {
@@ -1479,7 +1484,7 @@ header {
 .map-container h2 i {
     font-size: 50px;
     margin-right: 20px;
-    transform: rotate(-35deg);
+    /* transform: rotate(-35deg); */
     color: gray;
     transition: color 0.2s linear;
 }
